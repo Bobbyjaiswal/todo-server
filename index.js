@@ -1,1 +1,0 @@
-const a = "Farhan ki gand mein lund"
