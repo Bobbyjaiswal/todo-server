@@ -1,1 +1,2 @@
-const a = "Farhan ki gand mein lund"
+const a = "Hello World! for 1st push in Sahar"
+console.log(a)
