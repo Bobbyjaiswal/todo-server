@@ -1,3 +1,6 @@
+const a = "Hello World! for 1st push in Sahar"
+console.log(a)
+
 import express from "express"
 
 const port = process.env.PORT || 4000;
