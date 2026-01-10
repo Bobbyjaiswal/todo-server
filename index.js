@@ -1,6 +1,3 @@
-const a = "Hello World! for 1st push in Sahar"
-console.log(a)
-
 import express from "express"
 import authRouter from "./router/auth.router.js";
 import connectDb from "./database/connectDb.js";
@@ -26,4 +23,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log("Server Started")
 })
-
