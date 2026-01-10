@@ -1,20 +1,32 @@
 import mongoose from "mongoose";
 
-const todoSchema = new mongoose({
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User"
+const todoSchema = new mongoose.Schema({
+  // userId: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: "User"
+  // },
+  username : {
+    type :String,
+    required:true
   },
   title: {
     type: String,
-    require: true
+    required: true
   },
-  body: {
-    type: String,
-    require: true
+  // body: {
+  //   type: String,
+  //   require: true
+  // }
+  deadline : {
+    type : Date,
+    required : true
+  },
+  isDone :{
+    type : Boolean ,
+    required : true
   }
 }, {
-  timestamp: true
+  timestamps: true
 })
 
 const Todo = mongoose.model("Todo", todoSchema)
