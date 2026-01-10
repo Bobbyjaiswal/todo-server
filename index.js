@@ -2,10 +2,21 @@ const a = "Hello World! for 1st push in Sahar"
 console.log(a)
 
 import express from "express"
+import authRouter from "./router/auth.router.js";
+import connectDb from "./database/connectDb.js";
 
 const port = process.env.PORT || 4000;
+const app = express()
 
-const test = "This Is Merged Conflict"
+// database connected
+await connectDb()
+
+// middleware
+app.use(express.json())
+
+
+// Router
+app.use("/api/auth", authRouter)
 
 app.get("/", (req, res) => {
   return res.status(200).json("This Is Home Page")
