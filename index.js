@@ -2,7 +2,7 @@ import express from "express"
 import authRouter from "./router/auth.router.js";
 import connectDb from "./database/connectDb.js";
 
-const port = process.env.PORT || 4000;
+const port = 4000;
 const app = express()
 
 // database connected
